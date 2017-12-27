@@ -13,6 +13,7 @@ th, td {
     padding: 5px;
 }
 </style>
+<body>
 <h1>Lista Osob</h1>
 <table style="width:50%">
   <tr>
@@ -20,14 +21,13 @@ th, td {
     <th>Lastname</th>
     <th>Age</th>
   </tr>
-  {% for osoba in Osoby %}
-  <tr>
-    <td>{{osoba.name}} </td>
-    <td>{{osoba.surname}} </td>
-    <td>{{osoba.age}} </td>
-  </tr>
-
-<body>
-
+        {% for dane_osoby in Osoby %}
+            <tr>
+                <td>{{dane_osoby[0]}} </td>
+                <td>{{dane_osoby[1]}} </td>
+                <td>{{dane_osoby[2]}} </td>
+            </tr>
+        {% endfor %}
+</table>
 </body>
 </html>
