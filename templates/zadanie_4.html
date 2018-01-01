@@ -21,11 +21,11 @@ th, td {
     <th>Lastname</th>
     <th>Age</th>
   </tr>
-        {% for dane_osoby in Osoby %}
+        {% for osoba in Osoby %}
             <tr>
-                <td>{{dane_osoby[0]}} </td>
-                <td>{{dane_osoby[1]}} </td>
-                <td>{{dane_osoby[2]}} </td>
+                <td>{{ osoba.name }} </td>
+                <td>{{ osoba.surname }}</td>
+                <td>{{ osoba.age }}</td>
             </tr>
         {% endfor %}
 </table>

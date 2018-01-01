@@ -9,19 +9,28 @@ class Osoba:
         return "{}, {}, {}".format(self.name, self.surname, self.age)
 
 
-Osoby_dane = {"Bartek":["Bartek", "Biskupski", 32], "Vladimir":["Wlodzimir", "Slawiecki", 31]}
+Osoby_dane = {"Batman":["Bruce", "Wayne", 25], "Superman":["Clark", "Kent", 25]}
 
 
-Osoby = []
+# Osoby = []
+# lista_osob = locals().update(Osoby_dane)
+#
+# for key in Osoby_dane.keys():
+#     lista_osob.append(key)
+#     key = [Osoba(*Osoby_dane[key])]
+#     Osoby.append(key)
+#
+# print(lista_osob)
 
 
-print(Osoby)
+Batman = Osoba("Bruce", "Wayne", 25)
+Superman = Osoba("Clark", "Kent", 25)
+Osoby = [Batman, Superman]
+
+
 app = Flask(__name__)
 @app.route("/osoby", methods = ["GET"])
 def name():
-    global status
-    for key in Osoby_dane.keys():
-        Osoby.append([Osoba(*Osoby_dane[key])])
     return render_template("zadanie_4.html", Osoby = Osoby)
 
 app.run(debug=True)
