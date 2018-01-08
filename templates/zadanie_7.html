@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Band Search</title>
+</head>
+<body>
+        <form action="/bands" method ="get">
+        Band Name: <input type ="text" name = "band" ><br>
+        <button type="submit" >Search</button><br>
+        </form>
+        {% for bandname in bands_todisplay %}
+            <p>{{ bandname }}</p>
+        {% endfor %}
+
+</body>
+</html>
